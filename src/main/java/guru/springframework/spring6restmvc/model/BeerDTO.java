@@ -1,22 +1,23 @@
 package guru.springframework.spring6restmvc.model;
 
-import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-//@Data
 @Builder
 @Data
-public class Customer {
+public class BeerDTO {
     private UUID id;
     private Integer version;
-
-    private String customerName;
+    private String beerName;
+    private BeerStyle beerStyle;
+    private String upc;
+    private Integer quatityOnHand;
+    private BigDecimal price;
     private LocalDateTime createDate;
-    private LocalDateTime lastModifiedDate;
+    private LocalDateTime updateDate;
 
 }
